@@ -1,33 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <div class="container">
-
-        <div class="row mt-5">
-            <div class="col">
-                <label class="switch" for="autoplay">
-                    <input type="checkbox" id="autoplay" />
-                    <div class="slider round"></div>
-                </label>
-            </div>
-        </div>
-
-    </div>
-
-    <script src="lib/main.js"></script>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="wrapper text-center mt-5">
+					<div class="heading text-center">
+						<h1>Demo Gallery</h1>
+						<div class="line"></div>
+					</div>
+					<div class="menu mt-5">
+						<ul class="d-flex justify-content-start align-content-center">
+							<li class="tag active" data-type="all">ALL</li>
+							<li class="tag cities" data-type="city">CITIES</li>
+							<li class="tag seas" data-type="sea">SEA</li>
+						</ul>
+					</div>
+					<div class="choose d-flex justify-content-start align-items-center mt-2">
+						<div class="asc shuffle active">ASC</div>
+						<div class="desc shuffle">DESC</div>
+					</div>
+					<div class="gallery mt-3 d-flex flex-wrap align-items-center">
+						<div class="image city all">
+							<div class="overlay">
+								<div class="top-lay">1</div>
+								<div class="bottom-lay">NEW YORK</div>
+							</div>
+							<img src="img/demo1.jpg" alt="">
+						</div>
+						<div class="image city all">
+							<div class="overlay">
+								<div class="top-lay">2</div>
+								<div class="bottom-lay">ALONE</div>
+							</div>
+							<img src="img/demo2.jpg" alt="">
+						</div>
+						<div class="image sea all">
+							<div class="overlay">
+								<div class="top-lay">3</div>
+								<div class="bottom-lay">DEEP</div>
+							</div>
+							<img src="img/demo5.jpg" alt="">
+						</div>
+						<div class="image city all">
+							<div class="overlay">
+								<div class="top-lay">4</div>
+								<div class="bottom-lay">PURPLE SKY</div>
+							</div>
+							<img src="img/demo3.jpg" alt="">
+						</div>
+						<div class="image sea all">
+							<div class="overlay">
+								<div class="top-lay">5</div>
+								<div class="bottom-lay">LAVA SEA</div>
+							</div>
+							<img src="img/demo10.jpg" alt="">
+						</div>
+						<div class="image city all">
+							<div class="overlay">
+								<div class="top-lay">6</div>
+								<div class="bottom-lay">LIGHT</div>
+							</div>
+							<img src="img/demo4.jpg" alt="">
+						</div>
+						<div class="image sea all">
+							<div class="overlay">
+								<div class="top-lay">7</div>
+								<div class="bottom-lay">TURTLE</div>
+							</div>
+							<img src="img/demo9.jpg" alt="">
+						</div>
+						<div class="image sea all">
+							<div class="overlay">
+								<div class="top-lay">8</div>
+								<div class="bottom-lay">FISH</div>
+							</div>
+							<img src="img/demo8.jpg" alt="">
+						</div>
+						<div class="image sea all">
+							<div class="overlay">
+								<div class="top-lay">9</div>
+								<div class="bottom-lay">SEA</div>
+							</div>
+							<img src="img/demo6.jpg" alt="">
+						</div>
+						<div class="image city all">
+							<div class="overlay">
+								<div class="top-lay">10</div>
+								<div class="bottom-lay">BEAUTIFUL CITY</div>
+							</div>
+							<img src="img/demo7.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-5 d-flex justify-content-center">
+			<div class="upload-wrapper text-center">
+				<div class="upload d-flex justify-content-center align-items-center">
+					<div class="upload-icon">
+						<i class="fas fa-upload uploadButton"></i>
+						<p>Upload</p>
+					</div>
+					<input type="file" multiple class="d-none" id="inputUpload">
+				</div>
+				<div class="upload-area">
+					<span class="d-flex align-items-center mt-4">
+						<i class="far fa-file-image"></i>
+						<p>Photos :</p>
+					</span>
+					<div class="content photos mt-1"></div>
+					<span class="d-flex align-items-center mt-4">
+						<i class="fas fa-headphones-alt"></i>
+						<p>Audios :</p>
+					</span>
+					<div class="content audio mt-1"></div>
+					<span class="d-flex align-items-center mt-4">
+						<i class="fas fa-video"></i>
+						<p>Videos :</p>
+					</span>
+					<div class="content video mt-1"></div>
+				</div>
+				<div class="report d-none reportSize">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
 </body>
-
 </html>
